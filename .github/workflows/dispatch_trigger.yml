@@ -1,0 +1,16 @@
+name: Pulse Watch Manual Trigger
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger monitor workflow
+        uses: peter-evans/workflow-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          workflow: "Pulse Watch Monitor"
+          ref: main
