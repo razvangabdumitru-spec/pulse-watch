@@ -1,0 +1,9 @@
+{
+  "date": "2026-02-01",
+  "service": "api-gateway",
+  "requests": 118430,
+  "error_rate": 0.031,
+  "p95_latency_ms": 870,
+  "cpu_avg": 0.77,
+  "memory_mb": 7430
+}

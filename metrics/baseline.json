@@ -1,0 +1,7 @@
+{
+  "requests": 145000,
+  "error_rate": 0.012,
+  "p95_latency_ms": 540,
+  "cpu_avg": 0.62,
+  "memory_mb": 6800
+}
