@@ -34,10 +34,11 @@ def comparisons(daily, baseline):
         try:
             if isinstance(dv, float) or isinstance(bv, float):
                 delta = dv - bv
-                lines.append(f"{k}: {dv} vs baseline {bv} (delta {delta:+.3f})")
+                # Use consistent formatting: 3 decimals for floats
+                lines.append("{}: {} vs baseline {} (delta {:+.3f})".format(k, dv, bv, delta))
             else:
                 delta = dv - bv
-                lines.append(f"{k}: {dv} vs baseline {bv} (delta {delta:+d})")
+                lines.append("{}: {} vs baseline {} (delta {:+d})".format(k, dv, bv, delta))
         except Exception:
             lines.append(f"{k}: {dv} vs baseline {bv}")
     return lines
